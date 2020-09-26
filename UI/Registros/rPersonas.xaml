@@ -1,0 +1,52 @@
+<Window x:Class="Registro_prestamo.UI.Registros.rPersonas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Registro_prestamo.UI.Registros"
+        mc:Ignorable="d"
+        Title="Registro de personas" Height="450" Width="450" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10,10,10,10">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="PersonaId"/>
+                <TextBox x:Name="PersonaIdTextBox" Text="{Binding PersonaId}" Width="100"/>
+                <Button x:Name="BuscarButton" Margin="100,0,0,0" Width="100" Click="BuscarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source=""/>
+                        <Label Content="Buscar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+            <Label Content="Nombres" Margin="0,10,0,0"/>
+            <TextBox x:Name="NombresTextBox"  Text="{Binding Nombres}" Height="25" />
+
+            <Label Content="Balance" Margin="0,10,0,0"/>
+            <TextBox x:Name="BalanceTextBox"  Text="{Binding Balance}" Height="25"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,15,0,0" HorizontalAlignment="Center" >
+                <Button x:Name="NuevoButton" Width="100" Click="NuevoButton_Click" Margin="0,0,40,0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source=""/>
+                        <Label Content="Nuevo"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="GuardarButton" Width="100" Click="GuardarButton_Click" Margin="0,0,40,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source=""/>
+                        <Label Content="Guardar"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="EliminarButton" Width="100" Click="EliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source=""/>
+                        <Label Content="Eliminar"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
